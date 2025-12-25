@@ -2,8 +2,9 @@
 *~
 
 __pycache__
-myvenv
 db.sqlite3
+test.py
+
 /static
 .DS_Store
 .vscode/

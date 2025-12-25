@@ -6,14 +6,26 @@
     <title>My Syte</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Это мой первый сайт!</p>
-    <h2>Список достижений:</h2>
-    <ul>
-        <li>Создал Django проект</li>
-        <li>Создал приложение</li>
-        <li>Загрузил сайт на github и задеплоил на 
-            <strong><a href="https://l1ttlegem.pythonanywhere.com">Python Anywhere</a></strong></li>
-    </ul>
+    <div>
+        <h1>Hello, World!</h1>
+        <p>Это мой первый сайт!</p>
+        <h2>Список достижений:</h2>
+        <ul>
+            <li>Создал Django проект</li>
+            <li>Создал приложение</li>
+            <li>Загрузил сайт на github и задеплоил на 
+                <strong><a href="https://l1ttlegem.pythonanywhere.com">Python Anywhere</a></strong></li>
+        </ul>
+    </div>
+    
+    {% for post in posts %}
+        <div>
+            <h1> {{ post.title }} </h1>
+            <h6> published: {{ post.published_time }} </h6>
+            <p> {{ post.text|linebreaksbr }} </p>
+            <br>
+        </div>
+    {% endfor %}
+    
 </body>
 </html>
